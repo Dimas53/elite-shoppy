@@ -1,0 +1,146 @@
+.books {
+  padding-right: 122px;
+
+}
+
+.card {
+  padding: 5% 10% 10%;
+  /*padding: 15px 30px 30px;*/
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.14);
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  margin-bottom: 50px;
+}
+
+.card_link {
+  overflow: hidden;
+}
+
+
+.card_item {
+  width: 100%;
+  transition: all 0.7s ease-out;
+
+}
+
+.card_item:hover {
+  transform: scale(1.1);
+}
+
+.card_caption {
+  padding-top: 15px;
+}
+
+.card_name {
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.card_name a {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #FC636B;
+  letter-spacing: 0.065em
+}
+
+.card_size {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.13em;
+  margin-bottom: 10px;
+  color: #0D0D0D;
+}
+
+.card_price {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 13px;
+  font-weight: 400;
+
+}
+
+.card_price__first {
+  text-decoration: line-through;
+  color: #848484;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.card_btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  display: block;
+  padding: 3px 0px;
+  width: 100%;
+  border: 2px solid #2FDAB8;
+  text-align: center;
+  background: #2FDAB8;
+  margin: 0 auto;
+  letter-spacing: 0.065em;
+  transition: all 0.5s ease;
+}
+
+.card_btn:hover {
+  background: #ffffff;
+  color: #2FDAB8;
+}
+
+.card_btn:active, .card_btn:focus {
+  outline: none;
+}
+
+.card_btn_more {
+  /*width: 20%;*/
+}
+
+
+/* ----------- Media Queries ----------- */
+
+/* 992-1200px */
+
+@media screen and (max-width: 1200px) {
+  .card_name a {
+    font-size: 16px;
+  }
+  .card_btn {
+    font-size: 14px;
+    padding: 2px 0;
+  }
+  .card_size {
+    font-size: 12px;
+  }
+}
+
+/* 768-992px */
+
+@media screen and (max-width: 992px) {
+  .books {
+    padding-right: 20px;
+  }
+}
+
+/* 576-768px */
+
+@media screen and (max-width: 768px) {
+  .books {
+    padding-right: 0;
+  }
+}
+
+/* 320-576px */
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: px;
+  }
+}
+
+
+
+
+

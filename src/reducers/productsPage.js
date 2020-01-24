@@ -5,19 +5,22 @@ import {
   LOAD_MORE_PRODUCTS_SUCCESS
 } from "../actions/actionTypes";
 
-
-const initialState = {}
+const initialState = {
+  ids: []
+}
 
 export default (state = initialState, {type, payload}) => {
   switch (type) {
     case FETCH_PRODUCTS_SUCCESS:
-      const newValues = R.indexBy(R.prop('id'), payload)
-      return R.merge(state, newValues)
+      return R.merge(state, {
+        ids: R.pluck('id', payload)
+      })
     case LOAD_MORE_PRODUCTS_SUCCESS:
-      const moreValues = R.indexBy(R.prop('id'), payload)
-      return R.merge(state, moreValues)
+      const ids = R.pluck('id', payload)
+      return R.merge(state, {
+        ids: R.concat(state.ids, ids)
+      })
     default:
       return state
   }
-
 }
