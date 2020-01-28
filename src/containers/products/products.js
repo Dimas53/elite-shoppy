@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 
 import {fetchProducts, loadMoreProducts} from "../../actions/actions";
 import {getProducts} from "../../selectors";
+import Layout from "../layout/layout";
 
 
 class Products extends Component {
@@ -58,6 +59,7 @@ class Products extends Component {
   render() {
     const {products, loadMoreProducts} = this.props
     return (
+      <Layout>
         <div className="books row">
           {products.map((product, index) => this.renderProduct(product, index))}
           <div className="col-5 col-sm-4 col-xl-3 ml-auto">
@@ -68,6 +70,8 @@ class Products extends Component {
             </button>
           </div>
         </div>
+      </Layout>
+
 
 
     )

@@ -1,0 +1,43 @@
+footer {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  background: #0D0D0D;
+  padding: 37px 55px 32px;
+  margin: 100px 0 0 0;
+}
+.links {
+  margin-top: 24px;
+}
+.links_text__about {
+  padding-right: 60px;
+}
+.links__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.095em;
+  margin-bottom: 18px;
+}
+.links__text li {
+  margin-bottom: 8px;
+}
+.links__text li div {
+  margin-bottom: 24px;
+}
+.links__text li div i {
+  color: #2FDAB8;
+  font-size: 22px;
+  margin-right: 5px;
+}
+.social_icons__footer {
+  margin-left: 0;
+  color: #2FDAB8;
+  margin-top: 52px;
+}
+.all_rights {
+  text-align: center;
+  color: #2FDAB8;
+  font-size: 12px;
+  letter-spacing: 0.095em;
+}
