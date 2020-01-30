@@ -19,7 +19,7 @@ class Products extends Component {
     // const shortDescription = `${R.take(21, product.description)}`
     const lastPrice = Math.floor(product.price - product.price / 100 * 25)
     return(
-      <div className="col-6 col-md-6 col-lg-4 book-list d-flex justify-content-center" key={index}>
+      <div className="col-6 col-md-6 col-lg-4  book-list d-flex justify-content-center" key={index}>
         <div className="card ">
           <Link to={`/products/${product.id}`} className="card_link">
           <img

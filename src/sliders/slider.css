@@ -1,0 +1,87 @@
+/*Arrows*/
+.slick-prev:before {
+    font-family: "Font Awesome 5 Pro Light";
+    font-weight: 300;
+    content: "\f104";
+    font-size: 70px;
+}
+.slick-prev {
+    z-index: 100;
+    left: 0;
+}
+.slick-next:before {
+    font-family: "Font Awesome 5 Pro Light";
+    font-weight: 300;
+    content: "\f105";
+    font-size: 70px;
+}
+.slick-next {
+    z-index: 100;
+    right: 0;
+}
+.slick-prev, .slick-next {
+    width: 10%;
+    height: 100%;
+}
+/*Dots*/
+.slick-dots {
+    bottom: 35px;
+}
+.slick-dots li {
+    width: 55px;
+    height: 5px;
+    margin: 0 10px;
+    background: #FFFFFF;
+    border-radius: 2.5px;
+}
+.slick-dots li.slick-active {
+    background: #A1A1A1;
+}
+ .slick-dots li button:before {
+     content: '';
+ }
+
+
+/*Slides*/
+.slide {
+    padding: 165px 0;
+    color: #fff;
+}
+.first_sl {
+    background: url("../images/banner_1.jpg")no-repeat center top/cover;
+}
+.second_sl {
+    background: url("../images/banner_2.jpg")no-repeat center top/cover;
+}
+.third_sl {
+    background: url("../images/banner_3.jpg")no-repeat center top/cover;
+}
+.offer-const {
+    text-align: center;
+}
+.offer-const h1 {
+    font-weight: 300;
+    font-size: 60px;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+}
+.offer-const span {
+    font-weight: bold;
+    font-size: 60px;
+    color: #2FDAB8;
+}
+
+.offer-const p {
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.44em;
+    color: #FFB900;
+    margin: 46px 0 49px;
+}
+.offer-const_btn {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.115em;
+    width: 250px;
+    padding: 5px 0;
+}
