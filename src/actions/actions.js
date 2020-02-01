@@ -4,11 +4,15 @@ import {
   FETCH_PRODUCTS_FAILURE,
   LOAD_MORE_PRODUCTS_SUCCESS,
   LOAD_MORE_PRODUCTS_START,
-  LOAD_MORE_PRODUCTS_FAILURE
+  LOAD_MORE_PRODUCTS_FAILURE,
+  FETCH_SINGLE_PRODUCT_BY_ID_SUCCESS,
+  FETCH_SINGLE_PRODUCT_BY_ID_START,
+  FETCH_SINGLE_PRODUCT_BY_ID_FAILURE
 } from "./actionTypes";
 import {
   fetchProducts as fetchProductsApi,
-  loadMoreProducts as loadMoreProductsApi
+  loadMoreProducts as loadMoreProductsApi,
+  fetchSingleProductById as fetchSingleProductByIdApi
 } from "../api/api";
 import {getRenderedProductsLength} from "../selectors";
 
@@ -48,6 +52,24 @@ export const loadMoreProducts = () => async (dispatch, getState) => {
   } catch (err) {
     dispatch({
       type: LOAD_MORE_PRODUCTS_FAILURE,
+      payload: err,
+      error: true
+    })
+  }
+}
+
+export const fetchSingleProductById = (id) => async dispatch => {
+  dispatch({type:FETCH_SINGLE_PRODUCT_BY_ID_START})
+  
+  try{
+    const singleProduct = await fetchSingleProductByIdApi(id)
+    dispatch({
+      type:FETCH_SINGLE_PRODUCT_BY_ID_SUCCESS,
+      payload: singleProduct
+    })
+  } catch (err) {
+    dispatch({
+      type:FETCH_SINGLE_PRODUCT_BY_ID_FAILURE,
       payload: err,
       error: true
     })

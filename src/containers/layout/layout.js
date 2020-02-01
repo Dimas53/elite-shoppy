@@ -1,15 +1,11 @@
 import React from "react";
-import Header from "../../haeders/header";
-import Footer from "../../footer/footer";
-// import CatalogBg from "../../haeders/bg_catalog";
-import MainSlider from "../../sliders/sider-main";
+
+import App from "../app/app";
 
 
 const Layout = ({children}) => (
-  <div className="view-container">
-    <Header/>
-    <MainSlider/>
-    {/*<CatalogBg/>*/}
+  <App>
+
 
     <div className="container-fluid catalog-container">
       <div className="row">
@@ -26,9 +22,8 @@ const Layout = ({children}) => (
       </div>
     </div>
 
-    <Footer/>
 
-  </div>
+  </App>
 )
 
 export default Layout

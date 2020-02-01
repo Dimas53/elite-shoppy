@@ -1,0 +1,85 @@
+.product {
+  margin-top: 100px;
+}
+.product_img {
+  height: 58%;
+  overflow: hidden;
+}
+.product_img, .product_thumbnail {
+  padding: 10px 10px;
+}
+
+.desc_product, .product_name {
+  font-weight: 500;
+  font-size: 23px;
+  letter-spacing: 0.095em;
+  text-transform: uppercase;
+  color: #2FDAB8;
+  margin-bottom: 60px;
+}
+.desc_product_name {
+  font-weight: 500;
+  font-size: 18px;
+  color: #0D0D0D;
+  letter-spacing: 0.095em;
+  margin-bottom: 10px;
+}
+.desc_product_text {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.095em;
+  line-height: 1.7em;
+}
+
+
+
+.strong-rating span.star:before {
+  color: #0D0D0D;
+}
+.strong-rating span.star.current:before {
+  color: #2FDAB8;
+}
+
+.strong-rating span.star:before {
+  font-family: "Font Awesome 5 Pro Solid";
+  content: "\f005";
+  display: inline-block;
+  font-size: 20px;
+  padding: 0 4px;
+  transition: color 0.3s ease;
+}
+
+.product_name {
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+
+.product_price {
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: 500;
+
+}
+
+.product_price__first {
+  font-weight: 400;
+  text-decoration: line-through;
+  color: #848484;
+  font-size: 23px;
+  margin-left: 15px;
+}
+
+.short_desc h4, .quantity h4, .size h4 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+.desc_short_text {
+  letter-spacing: 0.095em;
+}
+.product_add {
+  margin-top: 45px;
+  width: 60%;
+  margin-left: 0;
+}

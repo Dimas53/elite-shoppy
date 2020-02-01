@@ -27,7 +27,7 @@ export default class MainSlider extends Component {
               <h1>favorite little <span>things</span></h1>
               <p>Trending designs</p>
               <button className="card_btn offer-const_btn">
-                Call back
+                All catalog
               </button>
             </div>
           </div>
@@ -36,7 +36,7 @@ export default class MainSlider extends Component {
               <h1>Summer <span>Collection</span></h1>
               <p>New Arrivals On Sale</p>
               <button className="card_btn offer-const_btn">
-                Call back
+                All catalog
               </button>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default class MainSlider extends Component {
               <h1>The biggest <span>sale</span></h1>
               <p>Special for today</p>
               <button className="card_btn offer-const_btn">
-                Call back
+                All catalog
               </button>
             </div>
           </div>
