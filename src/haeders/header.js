@@ -1,6 +1,8 @@
 import React from "react";
 import "./header.css"
 import logo from "../images/logo.png"
+import BasketCard from "../components/basketCard/basketCard";
+import {Link} from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,16 +11,21 @@ const Header = () => {
         <div className="row align-items-center">
           <div className="col-3 col-md-3">
             <div className="logo-group">
-              <img src={logo} alt=""/>
-              {/*<h2 className="nav_logo">*/}
-              {/*  <span>E</span>lite Shoppy*/}
-              {/*</h2>*/}
+              <Link to='/'>
+                <img src={logo} alt=""/>
+              </Link>
+
+
             </div>
           </div>
           <div className="col-3 menu-collapse">
             <nav className="navigation">
               <ul className="menu d-flex">
-                <li className="menu_item">Catalog</li>
+                <li className="menu_item">
+                  <Link to='/products'>
+                    Catalog
+                  </Link>
+                </li>
                 <li className="menu_item">Men <i className="fa fa-caret-down"/></li>
                 <li className="menu_item">Women <i className="fa fa-caret-down"/></li>
                 <li className="menu_item">Shoes <i className="fa fa-caret-down"/></li>
@@ -36,15 +43,19 @@ const Header = () => {
           </div>
           <div className="col-4">
             <div className="info d-flex align-items-center justify-content-around">
-              <div className="info_item basket d-flex align-items-center">
-                <span>
-                  <i className="fa fa-cart-arrow-down"/>
-                </span>
-                <div className="basket_text">
-                  <p>$ 345.00</p>
-                  <p>(3) items</p>
-                </div>
-              </div>
+
+              <BasketCard/>
+
+
+              {/*<div className="info_item basket d-flex align-items-center">*/}
+              {/*  <span>*/}
+              {/*    <i className="fa fa-cart-arrow-down"/>*/}
+              {/*  </span>*/}
+              {/*  <div className="basket_text">*/}
+              {/*    <p>$ 345.00</p>*/}
+              {/*    <p>(3) items</p>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
               <div className="info_item auth d-flex align-items-center">
                 <span>
                   <i className="fa fa-user"/>

@@ -81,6 +81,9 @@ header {
   background: url(../images/bg_catalog.jpg)no-repeat center center/cover;
   padding: 71px 0 48px;
 }
+.singlePage_offer {
+  background: url(../images/singlePage_bg.jpg)no-repeat center center/cover;
+}
 .offer_text {
   font-size: 40px;
   color: #fff;

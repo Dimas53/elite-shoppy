@@ -7,7 +7,8 @@ import {
   LOAD_MORE_PRODUCTS_FAILURE,
   FETCH_SINGLE_PRODUCT_BY_ID_SUCCESS,
   FETCH_SINGLE_PRODUCT_BY_ID_START,
-  FETCH_SINGLE_PRODUCT_BY_ID_FAILURE
+  FETCH_SINGLE_PRODUCT_BY_ID_FAILURE,
+  ADD_PRODUCT_TO_BASKET
 } from "./actionTypes";
 import {
   fetchProducts as fetchProductsApi,
@@ -74,4 +75,11 @@ export const fetchSingleProductById = (id) => async dispatch => {
       error: true
     })
   }
+}
+
+export const addProductToBasket = id => dispatch => {
+  dispatch({
+    type: ADD_PRODUCT_TO_BASKET,
+    payload: id
+  })
 }

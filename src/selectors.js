@@ -8,4 +8,31 @@ export const getProducts = state => {
 }
 
 export const getRenderedProductsLength = state => R.length(state.productsPage.ids)
+
+export const getTotalBasketCount = state => R.length(state.basket)
+
+export const getTotalBasketPrice = state => {
+  const totalPrice = R.compose(
+    R.sum,
+    R.pluck('discount'),
+    R.map(id => getProductsById(state, id))
+  )(state.basket)
+
+  return totalPrice
+}
+
+export const  getBasketProductsWithCount = state => {
+  const productCount = id => R.compose(
+    R.length,
+    R.filter(basketId => R.equals(id, basketId))
+  )(state.basket)
+  const productWithCount = product => R.assoc('count', productCount(product.id), product)
+  const uniqueIds = R.uniq(state.basket)
+  const products = R.compose(
+    R.map(productWithCount),
+    R.map(id => getProductsById(state, id))
+  )(uniqueIds)
+
+  return products
+}
   

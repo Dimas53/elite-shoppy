@@ -1,29 +1,28 @@
 import React from "react";
 import {Link} from "react-router-dom";
-// import bg_img from "../images/bg_catalog.jpg"
-import logo from "../images/logo_footer.png"
+
 import "./header.css"
- const CatalogBg = () => {
+const BasketBg = () => {
   return(
-    <section className="offer">
+    <section className="offer singlePage_offer">
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
+
             <div className="offer_text">
-              <p>Catalog of all products by</p>
+              <p>Your Cart</p>
             </div>
-
-
           </div>
           <div className="col-12">
-            <Link to='/'>
-              <img src={logo} alt="logo" className="offer_logo"/>
+            <Link to='/products'>
+              <button className="card_btn offer-const_btn">
+                All catalog
+              </button>
             </Link>
-
           </div>
         </div>
       </div>
     </section>
   )
- }
- export default CatalogBg
+}
+export default BasketBg

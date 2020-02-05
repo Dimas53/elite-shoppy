@@ -135,6 +135,14 @@ code {
   font-weight: 600;
 }
 
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
 
 
 

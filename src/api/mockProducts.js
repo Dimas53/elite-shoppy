@@ -6,6 +6,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 823,
+    discount: Math.floor(823 * 0.75),
     image: '/uploads/violet.jpg',
     image_2: '/uploads/violet_2.jpg',
     image_3: '/uploads/violet_3.jpg',
@@ -24,6 +25,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 953,
+    discount: Math.floor(953 * 0.85),
     image_2: '/uploads/red_2.jpg',
     image_3: '/uploads/red_3.jpg',
     image: '/uploads/red.jpg',
@@ -42,6 +44,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 764,
+    discount: Math.floor(764 * 0.65),
     image: '/uploads/rose.jpg',
     image_2: '/uploads/rose_2.jpg',
     image_3: '/uploads/rose_3.jpg',
@@ -60,6 +63,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 674,
+    discount: Math.floor(674 * 0.85),
     image: '/uploads/dress.jpg',
     image_2: '/uploads/dress_2.jpg',
     image_3: '/uploads/dress_3.jpg',
@@ -78,6 +82,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 975,
+    discount: Math.floor(975 * 0.75),
     image: '/uploads/red_jak.jpg',
     image_2: '/uploads/red_jak_2.jpg',
     image_3: '/uploads/red_jak_3.jpg',
@@ -96,6 +101,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 515,
+    discount: Math.floor(515 * 0.85),
     image: '/uploads/green_pul.jpg',
     image_2: '/uploads/green_pul_2.jpg',
     image_3: '/uploads/green_pul_3.jpg',
@@ -116,6 +122,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 823,
+    discount: Math.floor(823 * 0.85),
     image: '/uploads/black_jacket.jpg',
     image_2: '/uploads/black_jacket_2.jpg',
     image_3: '/uploads/black_jacket_3.jpg',
@@ -134,6 +141,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 953,
+    discount: Math.floor(953 * 0.85),
     image: '/uploads/blue_suit.jpg',
     image_2: '/uploads/blue_suit_2.jpg',
     image_3: '/uploads/blue_suit_3.jpg',
@@ -152,6 +160,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 764,
+    discount: Math.floor(764 * 0.75),
     image: '/uploads/brown_pull.jpg',
     image_2: '/uploads/brown_pull_2.jpg',
     image_3: '/uploads/brown_pull_3.jpg',
@@ -170,6 +179,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 674,
+    discount: Math.floor(674 * 0.85),
     image: '/uploads/green_dress.jpg',
     image_2: '/uploads/green_dress_2.jpg',
     image_3: '/uploads/green_dress_3.jpg',
@@ -188,6 +198,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 975,
+    discount: Math.floor(953 * 0.85),
     image: '/uploads/military.jpg',
     image_2: '/uploads/military_2.jpg',
     image_3: '/uploads/military_3.jpg',
@@ -206,6 +217,7 @@ export default [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: 515,
+    discount: Math.floor(515 * 0.85),
     image: '/uploads/red_pullover.jpg',
     image_2: '/uploads/red_pullover_2.jpg',
     image_3: '/uploads/red_pullover_3.jpg',

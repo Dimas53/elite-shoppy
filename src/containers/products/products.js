@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 // import * as R from "ramda";
 import {Link} from "react-router-dom";
 
-import {fetchProducts, loadMoreProducts} from "../../actions/actions";
+import {fetchProducts, loadMoreProducts, addProductToBasket} from "../../actions/actions";
 import {getProducts} from "../../selectors";
 import Layout from "../layout/layout";
 
@@ -17,7 +17,10 @@ class Products extends Component {
 
   renderProduct (product, index) {
     // const shortDescription = `${R.take(21, product.description)}`
-    const lastPrice = Math.floor(product.price - product.price / 100 * 25)
+    // const lastPrice = Math.floor(product.price - product.price / 100 * product.discount)
+    // const lastPrice = Math.floor(product.price - product.price / 100 * 25)
+    // const lastPrice = Math.floor(product.price - product.discount)
+    const {addProductToBasket} = this.props
     return(
       <div className="col-6 col-md-6 col-lg-4  book-list d-flex justify-content-center" key={index}>
         <div className="card ">
@@ -37,11 +40,14 @@ class Products extends Component {
             <p className="card_size">{product.size}</p>
             <h4 className="card_price">
               <span className="card_price__first">${product.price} </span>
-              <span> ${lastPrice}</span>
+              <span> ${product.discount}</span>
             </h4>
             {/*<p>{shortDescription}</p>*/}
             <p className="">
-              <button className="card_btn">
+              <button
+                className="card_btn"
+                onClick={() => addProductToBasket(product.id)}
+              >
                 Add to Cart
               </button>
               {/*<Link to={`/products/${product.id}`}*/}
@@ -84,6 +90,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   fetchProducts,
-  loadMoreProducts
+  loadMoreProducts,
+  addProductToBasket
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Products)

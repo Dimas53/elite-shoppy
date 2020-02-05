@@ -2,11 +2,15 @@ import React, {Component} from "react";
 import {connect} from "react-redux"
 import * as R from "ramda";
 
-import {fetchSingleProductById} from "../../actions/actions";
+import {
+  fetchSingleProductById,
+  addProductToBasket
+} from "../../actions/actions";
 import {getProductsById} from "../../selectors";
 import App from "../app/app";
 import "./singleProduct.css"
 import Magnifier from "react-magnifier"
+import SinglePageBg from "../../haeders/bg_singlePage";
 
 
 class SingleProduct extends Component {
@@ -15,9 +19,9 @@ class SingleProduct extends Component {
   }
 
   renderContent() {
-    const {singleProduct} = this.props
+    const {singleProduct, addProductToBasket} = this.props
     const shortDescription = `${R.take(116, singleProduct.description)}`
-    const lastPrice = Math.floor(singleProduct.price - singleProduct.price / 100 * 25)
+    // const lastPrice = Math.floor(singleProduct.price - singleProduct.price / 100 * 25)
     return (
       <div className="row">
         <div className="col-md-5">
@@ -39,7 +43,7 @@ class SingleProduct extends Component {
         <div className="col-md-6">
           <h3 className="product_name">{singleProduct.name}</h3>
           <h4 className="product_price">
-            <span >$ {lastPrice} </span>
+            <span >$ {singleProduct.discount} </span>
             <span className="product_price__first">$ {singleProduct.price} </span>
           </h4>
           <div className="rating">
@@ -65,7 +69,10 @@ class SingleProduct extends Component {
             <h4 className="size_name">Size :</h4>
             <p className="size_text">{singleProduct.size}</p>
           </div>
-          <button className="card_btn product_add">
+          <button
+            type='button'
+            onClick={() => addProductToBasket(singleProduct.id)}
+            className="card_btn product_add">
             Add to Cart
           </button>
 
@@ -76,6 +83,7 @@ class SingleProduct extends Component {
 
   renderSidebar() {
     return (
+
       <div>Sidebar</div>
     )
   }
@@ -112,6 +120,7 @@ class SingleProduct extends Component {
     const {singleProduct} = this.props
     return (
       <App>
+        <SinglePageBg />
         <div className="container-fluid catalog-container product">
 
           <div className="row">
@@ -139,7 +148,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-  fetchSingleProductById
+  fetchSingleProductById,
+  addProductToBasket
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SingleProduct)
