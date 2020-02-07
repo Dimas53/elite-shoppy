@@ -8,7 +8,10 @@ import {
   FETCH_SINGLE_PRODUCT_BY_ID_SUCCESS,
   FETCH_SINGLE_PRODUCT_BY_ID_START,
   FETCH_SINGLE_PRODUCT_BY_ID_FAILURE,
-  ADD_PRODUCT_TO_BASKET
+  ADD_PRODUCT_TO_BASKET,
+  REMOVE_PRODUCT_FROM_BASKET,
+  INCREMENT_PRODUCT_FROM_BASKET,
+  CLEAN_BASKET
 } from "./actionTypes";
 import {
   fetchProducts as fetchProductsApi,
@@ -81,5 +84,27 @@ export const addProductToBasket = id => dispatch => {
   dispatch({
     type: ADD_PRODUCT_TO_BASKET,
     payload: id
+  })
+}
+
+export const removeProductFromBasket = id => dispatch => {
+  dispatch({
+    type: REMOVE_PRODUCT_FROM_BASKET,
+    payload: id
+  })
+}
+
+
+
+export const incrementProductFromBasket = id => dispatch => {
+  dispatch({
+    type: INCREMENT_PRODUCT_FROM_BASKET,
+    payload: id
+  })
+}
+
+export const cleanBasket = () => dispatch => {
+  dispatch({
+    type: CLEAN_BASKET,
   })
 }

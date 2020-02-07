@@ -57,7 +57,7 @@ const Footer = () => {
               <ul className="links__text">
                 <li>
                   <div className="phone d-flex align-items-center">
-                    <i className="far fa-map-marker-alt"/>
+                    <i className="fal fa-map-marker-alt"/>
                     <p className="phone_text">NY 100034, California, USA</p>
                   </div>
                 </li>

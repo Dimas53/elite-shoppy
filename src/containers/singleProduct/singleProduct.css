@@ -41,7 +41,7 @@
 }
 
 .strong-rating span.star:before {
-  font-family: "Font Awesome 5 Pro Solid";
+  font-family: "Font Awesome 5 Free";
   content: "\f005";
   display: inline-block;
   font-size: 20px;

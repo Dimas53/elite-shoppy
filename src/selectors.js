@@ -35,4 +35,22 @@ export const  getBasketProductsWithCount = state => {
 
   return products
 }
-  
+
+
+export const  plusButton = state => {
+  const productCount = id => R.compose(
+    R.add(basketId => R.equals(id, basketId)),
+    R.length,
+    R.filter(basketId => R.equals(id, basketId))
+  )(state.basket)
+  const productWithCount = product => R.assoc('count', productCount(product.id), product)
+  const uniqueIds = R.uniq(state.basket)
+  const plusButton = R.compose(
+    R.map(productWithCount),
+    R.map(id => getProductsById(state, id))
+  )(uniqueIds)
+
+  return plusButton
+}
+
+

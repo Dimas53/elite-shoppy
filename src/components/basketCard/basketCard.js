@@ -20,7 +20,7 @@ const BasketCard = ({totalBasketCount, totalBasketPrice}) => {
            <i className="fa fa-cart-arrow-down"/>
         </span>
         <div className="basket_text">
-          <p>$ {totalBasketPrice}</p>
+          <p>$ {totalBasketPrice.toFixed(2)}</p>
           <p>{totalBasketCount} items</p>
         </div>
       </Link>
