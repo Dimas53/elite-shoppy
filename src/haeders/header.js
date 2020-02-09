@@ -3,6 +3,7 @@ import "./header.css"
 import logo from "../images/logo.png"
 import BasketCard from "../components/basketCard/basketCard";
 import {Link} from "react-router-dom";
+import Search from "../components/search/search";
 
 const Header = () => {
   return (
@@ -34,12 +35,13 @@ const Header = () => {
           </div>
 
           <div className="col-2">
-            <div className="search d-flex align-items-center">
-              <input type="text" className="search_input"/>
-              <span>
-                <i className="fal fa-search"/>
-              </span>
-            </div>
+            <Search/>
+            {/*<div className="search d-flex align-items-center">*/}
+            {/*  <input type="text" className="search_input"/>*/}
+            {/*  <span>*/}
+            {/*    <i className="fal fa-search"/>*/}
+            {/*  </span>*/}
+            {/*</div>*/}
           </div>
           <div className="col-4">
             <div className="info d-flex align-items-center justify-content-around">

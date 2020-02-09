@@ -2,12 +2,18 @@ export default [
   {
     id: '1',
     categoryId: '1',
+    categoryItem: 'bluse',
     name: 'Jacket purple',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
     price: (823).toFixed(2),
     discount: Math.abs(823 * 0.75).toFixed(2),
-    image: '/uploads/violet.jpg',
+    image: '/uploads/violet.jpg', // преобразовать в массив [imgUrl, imgUrl]
+    // images: [
+    //   require('/uploads/violet1.jpg'),
+    //   require('/uploads/violet1.jpg'),
+    //   require('/uploads/violet1.jpg'),
+    // ],
     image_2: '/uploads/violet_2.jpg',
     image_3: '/uploads/violet_3.jpg',
     cpu: '1.3GHz Apple A6',
@@ -15,12 +21,13 @@ export default [
     size: 'XL/L/M/S',
     weight: '132 grams (4.7 ounces) with battery',
     display: '4.0 326 pixel density',
-    battery: '1480 mAh',
+    battery: '1580 mAh',
     memory: '16GB, 32GB and RAM 1 GB'
   },
   {
     id: '2',
     categoryId: '1',
+    categoryItem: 'jacket',
     name: 'Red T-shirt',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
@@ -40,6 +47,7 @@ export default [
   {
     id: '3',
     categoryId: '4',
+    categoryItem: 'jacket',
     name: 'Pink jacket',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
@@ -59,6 +67,7 @@ export default [
   {
     id: '4',
     categoryId: '5',
+    categoryItem: 'jacket',
     name: 'Checkered dress',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
@@ -78,6 +87,7 @@ export default [
   {
     id: '5',
     categoryId: '3',
+    categoryItem: 'jacket',
     name: 'Red jacket',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
@@ -97,6 +107,7 @@ export default [
   {
     id: '6',
     categoryId: '2',
+    categoryItem: 'jacket',
     name: 'Green pullover',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
@@ -118,6 +129,7 @@ export default [
   {
     id: '7',
     categoryId: '1',
+    categoryItem: 'jacket',
     name: 'Black jacket',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
@@ -137,6 +149,7 @@ export default [
   {
     id: '8',
     categoryId: '1',
+    categoryItem: 'jacket',
     name: 'Blue suit',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
@@ -156,6 +169,7 @@ export default [
   {
     id: '9',
     categoryId: '4',
+    categoryItem: 'jacket',
     name: 'Brown pullover',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
@@ -175,6 +189,7 @@ export default [
   {
     id: '10',
     categoryId: '5',
+    categoryItem: 'jacket',
     name: 'Green dress',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
@@ -194,6 +209,7 @@ export default [
   {
     id: '11',
     categoryId: '3',
+    categoryItem: 'jacket',
     name: 'Military jacket',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
@@ -213,6 +229,7 @@ export default [
   {
     id: '12',
     categoryId: '2',
+    categoryItem: 'jacket',
     name: 'Red pullover',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',

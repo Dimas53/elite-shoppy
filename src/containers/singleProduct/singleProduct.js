@@ -25,6 +25,16 @@ class SingleProduct extends Component {
     return (
       <div className="row">
         <div className="col-md-5">
+          {/*<div>*/}
+          {/*  <h2>Custom Paging</h2>*/}
+          {/*  <Slider {...settings}>*/}
+          {/*    {singleProduct.images.map(img => (*/}
+          {/*      <div>*/}
+          {/*        <img src={img} />*/}
+          {/*      </div>*/}
+          {/*    ))}*/}
+
+          {/*  </Slider>*/}
 
 
           <div className="product_img">

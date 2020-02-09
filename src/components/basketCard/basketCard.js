@@ -26,11 +26,9 @@ const BasketCard = ({totalBasketCount, totalBasketPrice}) => {
       </Link>
 
       <div className="dropdown-child">
-        <p>$ {totalBasketPrice}</p>
+        <p>$ {totalBasketPrice.toFixed(2)}</p>
         <p>{totalBasketCount} items</p>
-        <p>{totalBasketCount} items</p>
-        <p>{totalBasketCount} items</p>
-        <p>{totalBasketCount} items</p>
+
       </div>
     </div>
   )

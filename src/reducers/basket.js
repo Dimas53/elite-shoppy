@@ -17,7 +17,7 @@ export default (state = initialState, {type, payload}) => {
       return R.without(R.of(payload), state)
     case INCREMENT_PRODUCT_FROM_BASKET:
       // const moreValues = R.inc(R.prop('count'), payload)
-      return R.sum(R.append(payload, state))
+      return R.dropLast(payload, state)
     case CLEAN_BASKET:
       return initialState
 

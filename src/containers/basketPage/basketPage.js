@@ -3,13 +3,18 @@ import {connect} from "react-redux"
 import * as R from "ramda"
 import {
   getBasketProductsWithCount,
-  getTotalBasketPrice, plusButton
+  getTotalBasketPrice, plusButtonCount
 } from "../../selectors";
 import "./basketPage.css"
 import App from "../app/app";
 import BasketBg from "../../haeders/bg_basket";
 import {Link} from "react-router-dom";
-import {removeProductFromBasket, incrementProductFromBasket, cleanBasket} from "../../actions/actions";
+import {
+  removeProductFromBasket,
+  incrementProductFromBasket,
+  cleanBasket,
+  addProductToBasket
+} from "../../actions/actions";
 
 
 
@@ -17,13 +22,14 @@ const Basket = ({
                   products,
                   totalPrice,
                   plusButton,
+                  addProductToBasket,
                   removeProductFromBasket,
                   incrementProductFromBasket,
                   cleanBasket}) => {
 
 
   const isBasketEmpty = R.isEmpty(products)
-
+  // const {addProductToBasket} = this.props
 
 
   const renderContent = () => (
@@ -59,10 +65,16 @@ const Basket = ({
 
                     <button
                       type='button'
-                      onClick={incrementProductFromBasket}
+                      onClick={() => addProductToBasket(product.id)}
 
                     >+</button>
+                    <button
+                      type='button'
+                      onClick={() => incrementProductFromBasket(product.id)}
 
+                    >-</button>
+
+                    {/*<p className="quantity_text">{plusButton}</p>*/}
                     <p className="quantity_text">{product.count}</p>
                   </div>
                   <div className="size">
@@ -79,7 +91,7 @@ const Basket = ({
                   onClick={() => removeProductFromBasket(product.id)}
                   className="cart_delete"
                 >
-                  <i className="far fa-trash-alt"></i>
+                  <i className="far fa-trash-alt"/>
                 </div>
               </div>
             </div>
@@ -155,14 +167,15 @@ const mapStateToProps = state => {
   return {
     products: getBasketProductsWithCount(state),
     totalPrice: getTotalBasketPrice(state),
-    plusButton
+    plusButton: plusButtonCount()
   }
 }
 
 const mapDispatchToProps = {
   removeProductFromBasket,
   incrementProductFromBasket,
-  cleanBasket
+  cleanBasket,
+  addProductToBasket
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Basket)

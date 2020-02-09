@@ -19,7 +19,7 @@ header {
   font-size: 14px;
 }
 
-.search span, .info_item span {
+.info_item span {
     width: 30px;
     height: 30px;
     background-color: #2FDAB8;
@@ -30,15 +30,15 @@ header {
     align-items: center;
     margin-right: 10px;
 }
-.search span {
-  margin-right: 0;
-}
-.search_input {
-  width: 80%;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-  border: none;
-  margin-right: 3px;
-}
+/*.search span {*/
+/*  margin-right: 0;*/
+/*}*/
+/*.search_input {*/
+/*  width: 80%;*/
+/*  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);*/
+/*  border: none;*/
+/*  margin-right: 3px;*/
+/*}*/
 
 .basket span {
   font-size: 22px;

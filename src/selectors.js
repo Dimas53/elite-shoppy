@@ -3,8 +3,19 @@ import * as R from "ramda";
 export const getProductsById = (state, id) => R.prop(id, state.products)
 
 export const getProducts = state => {
-  const products = R.map(id => getProductsById(state, id), state.productsPage.ids)
+  const applySearch = item => R.contains(
+    state.productsPage.search,
+    R.prop('name', item)
+    // R.prop('categoryItem', item)
+  )
+  const products = R.compose(
+    R.filter(applySearch),
+    R.map(id => getProductsById(state, id))
+  )(state.productsPage.ids)
+
   return products
+  // const products = R.map(id => getProductsById(state, id), state.productsPage.ids)
+  // return products
 }
 
 export const getRenderedProductsLength = state => R.length(state.productsPage.ids)
@@ -37,20 +48,7 @@ export const  getBasketProductsWithCount = state => {
 }
 
 
-export const  plusButton = state => {
-  const productCount = id => R.compose(
-    R.add(basketId => R.equals(id, basketId)),
-    R.length,
-    R.filter(basketId => R.equals(id, basketId))
-  )(state.basket)
-  const productWithCount = product => R.assoc('count', productCount(product.id), product)
-  const uniqueIds = R.uniq(state.basket)
-  const plusButton = R.compose(
-    R.map(productWithCount),
-    R.map(id => getProductsById(state, id))
-  )(uniqueIds)
+export const  plusButtonCount = () => getBasketProductsWithCount
 
-  return plusButton
-}
 
 

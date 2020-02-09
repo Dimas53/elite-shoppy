@@ -11,7 +11,8 @@ import {
   ADD_PRODUCT_TO_BASKET,
   REMOVE_PRODUCT_FROM_BASKET,
   INCREMENT_PRODUCT_FROM_BASKET,
-  CLEAN_BASKET
+  CLEAN_BASKET,
+  SEARCH_PRODUCT
 } from "./actionTypes";
 import {
   fetchProducts as fetchProductsApi,
@@ -79,6 +80,14 @@ export const fetchSingleProductById = (id) => async dispatch => {
     })
   }
 }
+
+export const searchProduct = text => dispatch => {
+  dispatch({
+    type: SEARCH_PRODUCT,
+    payload: text
+  })
+}
+
 
 export const addProductToBasket = id => dispatch => {
   dispatch({
