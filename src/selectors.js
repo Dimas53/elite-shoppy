@@ -5,7 +5,7 @@ export const getProductsById = (state, id) => R.prop(id, state.products)
 export const getProducts = state => {
   const applySearch = item => R.contains(
     state.productsPage.search,
-    R.prop('name', item)
+    R.prop('name' && 'categoryItem' && 'battery', item)
     // R.prop('categoryItem', item)
   )
   const products = R.compose(
