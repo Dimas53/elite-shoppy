@@ -5,6 +5,9 @@ import Footer from "../../footer/footer";
 import MainSlider from "../../sliders/sider-main";
 
 
+
+
+
 const MainPage = ({children}) => (
   <div className="view-container app">
     <Header/>

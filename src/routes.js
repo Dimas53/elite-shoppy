@@ -10,6 +10,7 @@ export default (
   <Switch>
     <Route path='/' component={MainPage} exact/>
     <Route path='/products' component={Products} exact/>
+    <Route path='/categories/:id' component={Products} exact/>
     <Route path='/products/:id' component={SingleProduct} exact/>
     <Route path='/basket' component={Basket} exact/>
   </Switch>

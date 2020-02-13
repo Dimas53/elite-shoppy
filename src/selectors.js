@@ -5,9 +5,11 @@ export const getProductsById = (state, id) => R.prop(id, state.products)
 export const getProducts = state => {
   const applySearch = item => R.contains(
     state.productsPage.search,
-    R.prop('name' && 'categoryItem' && 'battery', item)
+    R.prop('name' , item)
+    // R.prop('battery', item)
     // R.prop('categoryItem', item)
   )
+
   const products = R.compose(
     R.filter(applySearch),
     R.map(id => getProductsById(state, id))
@@ -50,5 +52,5 @@ export const  getBasketProductsWithCount = state => {
 
 export const  plusButtonCount = () => getBasketProductsWithCount
 
-
+export const getCategories = state => R.values(state.categories)
 

@@ -12,12 +12,16 @@ import {
   REMOVE_PRODUCT_FROM_BASKET,
   INCREMENT_PRODUCT_FROM_BASKET,
   CLEAN_BASKET,
-  SEARCH_PRODUCT
+  SEARCH_PRODUCT,
+  FETCH_CATEGORIES_SUCCESS,
+  FETCH_CATEGORIES_START,
+  FETCH_CATEGORIES_FAILURE
 } from "./actionTypes";
 import {
   fetchProducts as fetchProductsApi,
   loadMoreProducts as loadMoreProductsApi,
-  fetchSingleProductById as fetchSingleProductByIdApi
+  fetchSingleProductById as fetchSingleProductByIdApi,
+  fetchCategories as fetchCategoriesApi
 } from "../api/api";
 import {getRenderedProductsLength} from "../selectors";
 
@@ -116,4 +120,24 @@ export const cleanBasket = () => dispatch => {
   dispatch({
     type: CLEAN_BASKET,
   })
+}
+
+export const fetchCategories = () => async dispatch => {
+  dispatch({
+    type: FETCH_CATEGORIES_START
+  })
+
+  try {
+    const categories = await fetchCategoriesApi()
+    dispatch({
+      type: FETCH_CATEGORIES_SUCCESS,
+      payload: categories
+    })
+  } catch (err) {
+    dispatch({
+      type: FETCH_CATEGORIES_FAILURE,
+      payload: err,
+      error: true
+    })
+  }
 }

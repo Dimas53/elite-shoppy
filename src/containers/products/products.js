@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 // import * as R from "ramda";
 // import {Link} from "react-router-dom";
 
-import {fetchProducts, loadMoreProducts, addProductToBasket} from "../../actions/actions";
+import {fetchProducts, fetchCategories, loadMoreProducts, addProductToBasket} from "../../actions/actions";
 import {getProducts} from "../../selectors";
 import Layout from "../layout/layout";
 import RenderProduct from "../product/product"
@@ -13,6 +13,7 @@ import RenderProduct from "../product/product"
 class Products extends Component {
   componentDidMount() {
     this.props.fetchProducts()
+    this.props.fetchCategories()
   }
 
 
@@ -94,6 +95,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   fetchProducts,
   loadMoreProducts,
-  addProductToBasket
+  addProductToBasket,
+  fetchCategories
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Products)
