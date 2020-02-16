@@ -1,0 +1,22 @@
+.categories {
+    margin-top: 50px;
+}
+.categories_name {
+    padding: 8px 0;
+    font-size: 20px;
+}
+.categories_list {
+    margin-top: 30px;
+}
+.categories_item {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.categories_item span {
+    font-size: 18px;
+    color: #2FDAB8;
+}
